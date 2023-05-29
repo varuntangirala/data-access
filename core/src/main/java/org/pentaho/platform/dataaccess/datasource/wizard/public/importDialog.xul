@@ -6,6 +6,7 @@
 
   <dialog id="importDialog" width="395" title="" buttonlabelaccept="${importDialog.IMPORT}"
           buttonlabelcancel="${importDialog.CLOSE}" buttons="accept,cancel"
+          pen:responsive="true" pen:sizingmode="fillviewportwidth" pen:widthcategory="extrasmall"
           ondialogaccept="importDialogController.acceptDialog()" ondialogcancel="importDialogController.closeDialog()">
     <vbox>
       <deck id="importDeck">
@@ -41,7 +42,7 @@
                     pen:imagealttext="${importDialog.REMOVE_LOCALIZED_BUNDLE}"/>
           </hbox>
           <hbox>
-            <tree id="localizedBundlesTree" seltype="single" width="402" height="150">
+            <tree id="localizedBundlesTree" seltype="single" height="150">
               <treecols id="csvModelDataTableCols">
                 <treecol flex="1" id="csvColumnIncludeTreeCol" label="${importDialog.FILE_NAME}" pen:binding="fileName"
                          editable="false" type="text"/>
@@ -99,7 +100,7 @@
                         pen:imagealttext="${importDialog.REMOVE_PARAMETER}"/>
               </hbox>
               <hbox>
-                <tree id="analysisParametersTree" seltype="single" width="402" height="150">
+                <tree id="analysisParametersTree" seltype="single" height="150">
                   <treecols id="parametersTableCols">
                     <treecol flex="1" id="paramCol" label="${importDialog.NAME}" pen:binding="name" editable="false"
                              type="text"/>
@@ -119,6 +120,7 @@
 
   <!-- PARAMETERS DIALOG -->
   <dialog id="analysisParametersDialog" width="320" height="180" title="${importDialog.PARAMETERS}"
+          pen:responsive="true" pen:sizingmode="fillviewportwidth" pen:widthcategory="extrasmall"
           buttonlabelaccept="${importDialog.OK}" buttonlabelcancel="${importDialog.CLOSE}" buttons="accept,cancel"
           ondialogaccept="analysisImportDialogController.addParameter()"
           ondialogcancel="analysisImportDialogController.closeParametersDialog()">
